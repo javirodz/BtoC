@@ -1,0 +1,27 @@
+---
+conf:
+    conf_name: "current_config"
+    zone-1:
+        zone_name:    "zone1"
+        member1_name: "host1_fc1"
+        member1_wwn:  "20:01:43:80:24:d2:9e:01"
+        member2_name: "target1_fc1"
+        member2_wwn:  "50:01:43:80:24:d2:9e:aa"
+    zone-2:
+        zone_name:    "zone2"
+        member1_name: "host1_fc1"
+        member1_wwn:  "20:01:43:80:24:d2:9e:01"
+        member2_name: "target1_fc2"
+        member2_wwn:  "50:01:43:80:24:d2:9e:bb"
+    zone-3:
+        zone_name:    "zone3"
+        member1_name: "host1_fc2"
+        member1_wwn:  "20:01:43:80:24:d2:9e:02"
+        member2_name: "target1_fc1"
+        member2_wwn:  "50:01:43:80:24:d2:9e:aa"
+    zone-4:
+        zone_name:    "zone4"
+        member1_name: "host1_fc2"
+        member1_wwn:  "20:01:43:80:24:d2:9e:02"
+        member2_name: "target1_fc2"
+        member2_wwn:  "50:01:43:80:24:d2:9e:bb"
