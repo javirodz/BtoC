@@ -1,0 +1,18 @@
+{
+    "alias-1": {
+      "alias_name": "host1_fc1",
+      "alias_wwpn": "20:01:43:80:24:d2:9e:11"
+    },
+    "alias-2": {
+      "alias_name": "host1_fc2",
+      "alias_wwpn": "20:01:43:80:24:d2:9e:11"
+    },
+    "alias-3": {
+      "alias_name": "target1_cont1",
+      "alias_wwpn": "50:01:43:80:24:d2:9e:aa"
+    },
+    "alias-X": {
+      "alias_name": "target1_cont2",
+      "alias_wwpn": "50:01:43:80:24:d2:9e:bb"
+    }
+  }
