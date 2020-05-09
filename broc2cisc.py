@@ -31,11 +31,17 @@ def defined_zoneset(zone_file="sw1-zoneshow.txt"):
                 defined_cfg_name = line.split(':')[1]
                 for line in zone_in_text:
                     if line.startswith(" zone"):
-                        return defined_cfg_name, zoneset
+                        # remove spaces, newlines and tabs and leave only a csv str of the zones in the zoneset Set()
+                        str_zoneset_orig = ','.join(str(s) for s in zoneset)
+                        str_zoneset_notabs = str_zoneset_orig.replace('\t', '')
+                        str_zoneset_nospace = str_zoneset_notabs.replace(' ', '')
+                        str_zoneset = str_zoneset_nospace.replace('\n', '')
+                        return defined_cfg_name, str_zoneset
                     else:
                         for item in line.split(';'):
                             zoneset.add(item)
-    return defined_cfg_name, zoneset
+    print("SOME ERROR")
+    return
 
 def print_cisco_alias(vsan_id="100"):
     #print("Alias JSON")
@@ -59,15 +65,15 @@ def print_cisco_alias(vsan_id="100"):
 
 def cisco_zoneset(defined_cfg_name, str_zoneset, vsanid = "100", switch_id_zoneset_file="sw_zoneset"):
     with open(switch_id_zoneset_file, 'w') as zonesetFile:
-        print("configure terminal")
+        #print("configure terminal")
         zonesetFile.write("configure terminal\n")
-        print("zoneset name "+defined_cfg_name.replace('\t', '').replace('\n', '').replace(' ', '')+" vsan "+vsanid)
+        #print("zoneset name "+defined_cfg_name.replace('\t', '').replace('\n', '').replace(' ', '')+" vsan "+vsanid)
         zonesetFile.write("zoneset name "+defined_cfg_name.replace('\t', '').replace('\n', '').replace(' ', '')+" vsan "+vsanid+"\n")
         for i in str_zoneset.split(','):
            if i != '':
-               print("member "+i)
+               #print("member "+i)
                zonesetFile.write("member "+i+"\n")
-        print("end")
+        #print("end")
         zonesetFile.write("end\n")
 
 def main():
@@ -89,19 +95,15 @@ def main():
 
     #load_effective_conf()
 
-    #Get the defined zoneset from the zoneshowfile
-    #the zoneshow file is from the zoneshow command on a brocade switch
-    sw_zoneshow_input_file = "sw1-zoneshow.txt"
-    defined_cfg_name, zoneset = defined_zoneset(sw_zoneshow_input_file)
-    #remove spaces, newlines and tabs and leave only a csv str of the zones in the zoneset
-    str_zoneset_orig = ','.join(str(s) for s in zoneset)
-    str_zoneset_notabs = str_zoneset_orig.replace('\t', '')
-    str_zoneset_nospace = str_zoneset_notabs.replace(' ','')
-    str_zoneset = str_zoneset_nospace.replace('\n', '')
-    #print the commands to create a zoneset in a cisco mds
-    vlanid = "100"
-    switch_id_zoneset_file = "sw1_zoneset.mds"
-    cisco_zoneset(defined_cfg_name, str_zoneset, vlanid, switch_id_zoneset_file)
+    #Extract the defined zoneset from the zoneshowfile
+    #the zoneshow file is from the 'zoneshow' command in a brocade switch
+    sw_zoneshow_input_file = "sw2-zoneshow.txt"
+    defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
+
+    #print the commands to create a zoneset in a cisco mds to a .mds file
+    vsanid = "200"
+    switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
+    cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
 
 if __name__ == "__main__":
