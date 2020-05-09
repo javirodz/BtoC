@@ -1,0 +1,435 @@
+Defined configuration:
+ cfg:	Active_Zone
+		ma230Sw2_NSeries; MA230Sw2_V7000; ma231Sw2_NSeries;
+		MA231Sw2_V7000; ma232Sw2_NSeries; MA232Sw2_V7000;
+		ma233Sw2_NSeries; MA233Sw2_V7000; MS229Sw2_V7000; nbu_netapp;
+		nbu_ts3200; nbu_v7k; sa110_v7k; sa111_v7k; sa112_v7k;
+		sa150Sw2_NSeries; sa151Sw2_NSeries; sa152Sw2_NSeries;
+		sa153Sw2_NSeries; sa154Sw2_NSeries; sa155Sw2_NSeries;
+		sa160Sw2_NSeries; sa161SW2_NSeries; sa162Sw2_NSeries;
+		sa163SW2_NSeries; sa170Sw2_NSeries; SA170SW2_V7000;
+		SA171SW2_V7000; sa172Sw2_NSeries; sa180Sw2_NSeries;
+		sa182Sw2_NSeries; v7k_internal; MA234Sw2_V7000;
+		ma234Sw2_NSeries; ma235SW2_NSeries; ma235SW2_V7000;
+		ma236SW2_NSeries; ma236SW2_V7000; ma237SW2_NSeries;
+		ma237SW2_V7000; ma238SW2_NSeries; ma238SW2_V7000
+ zone:	MA230Sw2_V7000
+		ma230_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	MA231Sw2_V7000
+		ma231_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	MA232Sw2_V7000
+		ma232_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	MA233Sw2_V7000
+		ma233_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	MA234Sw2_V7000
+		ma234_sw2; Nimble2CAfc1; Nimble2CBfc1; Nimble1CAfc2;
+		Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	MS229Sw2_V7000
+		ms229_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	SA170SW2_V7000
+		sa160_sw2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	SA171SW2_V7000
+		sa170_sw2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	ma230Sw2_NSeries
+		HeadA_0b; HeadB_0b; ma230_sw2
+ zone:	ma231Sw2_NSeries
+		HeadA_0b; HeadB_0b; ma231_sw2
+ zone:	ma232Sw2_NSeries
+		HeadA_0b; HeadB_0b; ma232_sw2
+ zone:	ma233Sw2_NSeries
+		HeadA_0b; HeadB_0b; ma233_sw2
+ zone:	ma234Sw2_NSeries
+		HeadA_0b; HeadB_0b; ma234_sw2
+ zone:	ma235SW2_NSeries
+		HeadA_0b; HeadB_0b; ma235_sw2
+ zone:	ma235SW2_V7000
+		ma235_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	ma236SW2_NSeries
+		HeadA_0b; HeadB_0b; ma236_sw2
+ zone:	ma236SW2_V7000
+		ma236_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	ma237SW2_NSeries
+		HeadA_0b; HeadB_0b; ma237_sw2
+ zone:	ma237SW2_V7000
+		ma237_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	ma238SW2_NSeries
+		HeadA_0b; HeadB_0b; ma238_sw2
+ zone:	ma238SW2_V7000
+		ma238_sw2; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4; v7k2_3;
+		v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	nbu_netapp
+		HeadA_0b; HeadB_0b; nbu_slot2_1
+ zone:	nbu_ts3200
+		nbu_slot4_1; ts3200_drive2
+ zone:	nbu_v7k	nbu_slot2_1; Nimble1CAfc2; Nimble1CBfc2; v7k1_3; v7k1_4;
+		v7k2_3; v7k2_4; Nimble2CAfc1; Nimble2CBfc1
+ zone:	sa110_v7k
+		sa110_sw2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	sa111_v7k
+		sa111_sw2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	sa112_v7k
+		sa112_sw2; v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ zone:	sa150Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa150_sw2
+ zone:	sa151Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa151_sw2
+ zone:	sa152Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa152_sw2
+ zone:	sa153Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa153_sw2
+ zone:	sa154Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa154_sw2
+ zone:	sa155Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa155_sw2
+ zone:	sa160Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa160_sw2
+ zone:	sa161SW2_NSeries
+		HeadA_0b; HeadB_0b; sa161_sw2
+ zone:	sa162Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa162_sw2
+ zone:	sa163SW2_NSeries
+		HeadA_0b; HeadB_0b; sa163_sw2
+ zone:	sa170Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa170_sw2
+ zone:	sa172Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa172_sw2
+ zone:	sa180Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa180_sw2
+ zone:	sa182Sw2_NSeries
+		HeadA_0b; HeadB_0b; sa182_sw2
+ zone:	v7k_internal
+		v7k1_3; v7k1_4; v7k2_3; v7k2_4
+ alias:	HeadA_0b
+		50:0a:09:82:89:fb:46:76
+ alias:	HeadB_0b
+		50:0a:09:82:99:fb:46:76
+ alias:	Nimble1CAfc2
+		56:c9:ce:90:4c:94:70:02
+ alias:	Nimble1CBfc2
+		56:c9:ce:90:4c:94:70:04
+ alias:	Nimble2CAfc1
+		56:c9:ce:90:4c:94:70:05
+ alias:	Nimble2CBfc1
+		56:c9:ce:90:4c:94:70:07
+ alias:	ma230_sw2
+		20:00:00:25:b5:11:00:7f
+ alias:	ma231_sw2
+		20:00:00:25:b5:11:00:6f
+ alias:	ma232_sw2
+		20:00:00:25:b5:11:00:9f
+ alias:	ma233_sw2
+		20:00:00:25:b5:11:00:8f
+ alias:	ma234_sw2
+		20:00:00:25:b5:1b:00:1f
+ alias:	ma235_sw2
+		20:00:00:25:b5:1b:00:4e
+ alias:	ma236_sw2
+		20:00:00:25:b5:1b:00:5e
+ alias:	ma237_sw2
+		20:00:00:25:b5:1b:00:2e
+ alias:	ma238_sw2
+		20:00:00:25:b5:1b:00:3e
+ alias:	ms229_sw2
+		20:00:00:25:b5:11:00:5f
+ alias:	nbu_slot2_1
+		10:00:00:00:c9:c8:81:a7
+ alias:	nbu_slot4_1
+		10:00:00:00:c9:c8:81:ca
+ alias:	sa110_sw2
+		21:00:00:24:ff:44:69:db
+ alias:	sa111_sw2
+		21:00:00:24:ff:44:04:f5
+ alias:	sa112_sw2
+		21:00:00:24:ff:44:03:21
+ alias:	sa150_sw2
+		21:01:00:1b:32:ba:a0:de
+ alias:	sa151_sw2
+		21:01:00:1b:32:ba:83:29
+ alias:	sa152_sw2
+		21:01:00:1b:32:ba:a1:de
+ alias:	sa153_sw2
+		21:01:00:1b:32:ba:99:28
+ alias:	sa154_sw2
+		21:00:00:24:ff:3a:28:6d
+ alias:	sa155_sw2
+		21:00:00:24:ff:3a:25:7d
+ alias:	sa160_sw2
+		21:01:00:1b:32:ba:65:29
+ alias:	sa161_sw2
+		21:01:00:1b:32:bc:11:91
+ alias:	sa162_sw2
+		21:01:00:1b:32:b7:40:36
+ alias:	sa163_sw2
+		21:01:00:1b:32:b2:41:82
+ alias:	sa170_sw2
+		21:01:00:1b:32:bc:c2:90
+ alias:	sa172_sw2
+		21:01:00:1b:32:bf:f8:ea
+ alias:	sa180_sw2
+		21:01:00:1b:32:ba:46:de
+ alias:	sa182_sw2
+		21:01:00:1b:32:bf:9e:e8
+ alias:	ts3200_drive2
+		20:01:00:0e:11:14:bc:1a; 20:02:00:0e:11:14:bc:1a;
+		20:07:00:0e:11:14:bc:1a; 20:0a:00:0e:11:14:bc:1a
+ alias:	v7k1_3	50:05:07:68:02:30:58:46
+ alias:	v7k1_4	50:05:07:68:02:40:58:46
+ alias:	v7k2_3	50:05:07:68:02:30:58:47
+ alias:	v7k2_4	50:05:07:68:02:40:58:47
+
+Effective configuration:
+ cfg:	Active_Zone
+ zone:	MA230Sw2_V7000
+		20:00:00:25:b5:11:00:7f
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	MA231Sw2_V7000
+		20:00:00:25:b5:11:00:6f
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	MA232Sw2_V7000
+		20:00:00:25:b5:11:00:9f
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	MA233Sw2_V7000
+		20:00:00:25:b5:11:00:8f
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	MA234Sw2_V7000
+		20:00:00:25:b5:1b:00:1f
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	MS229Sw2_V7000
+		20:00:00:25:b5:11:00:5f
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	SA170SW2_V7000
+		21:01:00:1b:32:ba:65:29
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	SA171SW2_V7000
+		21:01:00:1b:32:bc:c2:90
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	ma230Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:11:00:7f
+ zone:	ma231Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:11:00:6f
+ zone:	ma232Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:11:00:9f
+ zone:	ma233Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:11:00:8f
+ zone:	ma234Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:1b:00:1f
+ zone:	ma235SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:1b:00:4e
+ zone:	ma235SW2_V7000
+		20:00:00:25:b5:1b:00:4e
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	ma236SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:1b:00:5e
+ zone:	ma236SW2_V7000
+		20:00:00:25:b5:1b:00:5e
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	ma237SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:1b:00:2e
+ zone:	ma237SW2_V7000
+		20:00:00:25:b5:1b:00:2e
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	ma238SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		20:00:00:25:b5:1b:00:3e
+ zone:	ma238SW2_V7000
+		20:00:00:25:b5:1b:00:3e
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	nbu_netapp
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		10:00:00:00:c9:c8:81:a7
+ zone:	nbu_ts3200
+		10:00:00:00:c9:c8:81:ca
+		20:01:00:0e:11:14:bc:1a
+		20:02:00:0e:11:14:bc:1a
+		20:07:00:0e:11:14:bc:1a
+		20:0a:00:0e:11:14:bc:1a
+ zone:	nbu_v7k	10:00:00:00:c9:c8:81:a7
+		56:c9:ce:90:4c:94:70:02
+		56:c9:ce:90:4c:94:70:04
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+		56:c9:ce:90:4c:94:70:05
+		56:c9:ce:90:4c:94:70:07
+ zone:	sa110_v7k
+		21:00:00:24:ff:44:69:db
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	sa111_v7k
+		21:00:00:24:ff:44:04:f5
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	sa112_v7k
+		21:00:00:24:ff:44:03:21
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
+ zone:	sa150Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:a0:de
+ zone:	sa151Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:83:29
+ zone:	sa152Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:a1:de
+ zone:	sa153Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:99:28
+ zone:	sa154Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:00:00:24:ff:3a:28:6d
+ zone:	sa155Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:00:00:24:ff:3a:25:7d
+ zone:	sa160Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:65:29
+ zone:	sa161SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:bc:11:91
+ zone:	sa162Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:b7:40:36
+ zone:	sa163SW2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:b2:41:82
+ zone:	sa170Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:bc:c2:90
+ zone:	sa172Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:bf:f8:ea
+ zone:	sa180Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:ba:46:de
+ zone:	sa182Sw2_NSeries
+		50:0a:09:82:89:fb:46:76
+		50:0a:09:82:99:fb:46:76
+		21:01:00:1b:32:bf:9e:e8
+ zone:	v7k_internal
+		50:05:07:68:02:30:58:46
+		50:05:07:68:02:40:58:46
+		50:05:07:68:02:30:58:47
+		50:05:07:68:02:40:58:47
