@@ -134,6 +134,66 @@ def main():
     sw2_vsanid = "2000"
     brocade_to_cisco_alias(sw2_alias_extract_file, sw2_vsanid)
 
+    #Zones
+    sw1_zones_extract_file = "sw1_zones_extract.txt"
+    sw1_vsanid = "1000"
+    brocade_to_cisco_zones(sw1_zones_extract_file, sw1_vsanid)
+
+    sw2_zones_extract_file = "sw2_zones_extract.txt"
+    sw2_vsanid = "2000"
+    brocade_to_cisco_zones(sw2_zones_extract_file, sw2_vsanid)
+
+def brocade_to_cisco_zones(sw_zones_extract_file,vsanid):
+    if sw_zones_extract_file.startswith("sw1"):
+        with open("sw1_cisco_zones-tmp.mds", "w") as cisco_zones_script_file:
+            with open(sw_zones_extract_file) as brocade_alias_text:
+                while True:
+                    try:
+                        line1 = brocade_alias_text.readline().replace('\t', '').replace(' ', '').split(':')[1]
+                        #print("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid)
+                        cisco_zones_script_file.write("configure terminal\n")
+                        cisco_zones_script_file.write("zone name "+line1.replace('\n', '')+" vsan "+vsanid+"\n")
+                    except:
+                        print("EOF")
+                        break
+                    line2 = brocade_alias_text.readline().replace('\t', '').replace(' ', '')
+
+                    for fcalias in line2.split(';'):
+                       #print("member pwwn "+wwpn)
+                        cisco_zones_script_file.write("member fcalias "+fcalias+"\n")
+                    cisco_zones_script_file.write("end\n")
+
+        #Remove Empty Lines
+        with open("sw1_cisco_zones-tmp.mds") as infile, open("sw1_cisco_zones.mds", 'w') as outfile:
+            for line in infile:
+                if not line.strip(): continue  # skip the empty line
+                outfile.write(line)  # non-empty line. Write it to output
+
+    else:
+        with open("sw2_cisco_zones-tmp.mds", "w") as cisco_zones_script_file:
+            with open(sw_zones_extract_file) as brocade_alias_text:
+                while True:
+                    try:
+                        line1 = brocade_alias_text.readline().replace('\t', '').replace(' ', '').split(':')[1]
+                        #print("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid)
+                        cisco_zones_script_file.write("configure terminal\n")
+                        cisco_zones_script_file.write("zone name "+line1.replace('\n', '')+" vsan "+vsanid+"\n")
+                    except:
+                        print("EOF")
+                        break
+                    line2 = brocade_alias_text.readline().replace('\t', '').replace(' ', '')
+
+                    for fcalias in line2.split(';'):
+                       #print("member pwwn "+wwpn)
+                        cisco_zones_script_file.write("member fcalias "+fcalias+"\n")
+                    cisco_zones_script_file.write("end\n")
+
+        #Remove Empty Lines
+        with open("sw2_cisco_zones-tmp.mds") as infile, open("sw2_cisco_zones.mds", 'w') as outfile:
+            for line in infile:
+                if not line.strip(): continue  # skip the empty line
+                outfile.write(line)  # non-empty line. Write it to output
+
 def brocade_to_cisco_alias(sw_alias_extract_file,vsanid):
     if sw_alias_extract_file.startswith("sw1"):
         with open("sw1_cisco_alias-tmp.mds", "w") as cisco_alias_script_file:

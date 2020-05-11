@@ -1,0 +1,330 @@
+configure terminal
+zone name MA229Sw1_V7000 vsan 1000
+member fcalias ma229_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name MA230Sw1_V7000 vsan 1000
+member fcalias ma230_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name MA231Sw1_V7000 vsan 1000
+member fcalias ma231_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name MA232Sw1_V7000 vsan 1000
+member fcalias ma232_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name MA233Sw1_V7000 vsan 1000
+member fcalias ma233_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name SA170SW1_V7000 vsan 1000
+member fcalias sa160_sw1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name SA171SW1_v7000 vsan 1000
+member fcalias sa170_sw1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name SA89_Scaleri3 vsan 1000
+member fcalias SA89_port1
+member fcalias Scaleri3_TopPort
+end
+configure terminal
+zone name ma230Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma230_sw1
+end
+configure terminal
+zone name ma231Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma231_sw1
+end
+configure terminal
+zone name ma232Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma232_sw1
+end
+configure terminal
+zone name ma233Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma233_sw1
+end
+configure terminal
+zone name ma234SW1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma234_sw1
+end
+configure terminal
+zone name ma234SW1_V7000 vsan 1000
+member fcalias ma234_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name ma235SW1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma235_sw1
+end
+configure terminal
+zone name ma235SW1_V7000 vsan 1000
+member fcalias ma235_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name ma236SW1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma236_sw1
+end
+configure terminal
+zone name ma236SW1_V7000 vsan 1000
+member fcalias ma236_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name ma237SW1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma237_sw1
+end
+configure terminal
+zone name ma237SW1_V7000 vsan 1000
+member fcalias ma237_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name ma238SW1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias ma238_sw1
+end
+configure terminal
+zone name ma238SW1_V7000 vsan 1000
+member fcalias ma238_sw1
+member fcalias Nimble1CAfc1
+member fcalias Nimble1CBfc1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+member fcalias Nimble2CAfc2
+member fcalias Nimble2CBfc2
+end
+configure terminal
+zone name nbu_netapp vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias nbu_slot2_0
+end
+configure terminal
+zone name nbu_ts3200 vsan 1000
+member fcalias nbu_slot4_0
+member fcalias ts3200_drive1
+end
+configure terminal
+zone name nbu_v7knbu_slot2_0;Nimble1CAfc1;Nimble1CBfc1;Nimble2CAfc2; vsan 1000
+member fcalias Nimble2CBfc2
+member fcalias SA89_port1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name sa110_v7k vsan 1000
+member fcalias sa110_sw1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name sa111_v7k vsan 1000
+member fcalias sa111_sw1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name sa112_v7k vsan 1000
+member fcalias sa112_sw1
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end
+configure terminal
+zone name sa150Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa150_sw1
+end
+configure terminal
+zone name sa151Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa151_sw1
+end
+configure terminal
+zone name sa152Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa152_sw1
+end
+configure terminal
+zone name sa153Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa153_sw1
+end
+configure terminal
+zone name sa154Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa154_sw1
+end
+configure terminal
+zone name sa155Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa155_sw1
+end
+configure terminal
+zone name sa160Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa160_sw1
+end
+configure terminal
+zone name sa161sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa161_sw1
+end
+configure terminal
+zone name sa162Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa162_sw1
+end
+configure terminal
+zone name sa163Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa163_sw1
+end
+configure terminal
+zone name sa170Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa170_sw1
+end
+configure terminal
+zone name sa172Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa172_sw1
+end
+configure terminal
+zone name sa180Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa180_sw1
+end
+configure terminal
+zone name sa182Sw1_NSeries vsan 1000
+member fcalias HeadA_0d
+member fcalias HeadB_0d
+member fcalias sa182_sw1
+end
+configure terminal
+zone name v7k_internal vsan 1000
+member fcalias v7k1_1
+member fcalias v7k1_2
+member fcalias v7k2_1
+member fcalias v7k2_2
+end

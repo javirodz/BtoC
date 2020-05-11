@@ -1,5 +1,5 @@
 configure terminal
-zoneset name Active_Zone vsan 200
+zoneset name Active_Zone vsan 2000
 member sa154Sw2_NSeries
 member sa172Sw2_NSeries
 member sa182Sw2_NSeries
