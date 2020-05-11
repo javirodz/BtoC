@@ -1,5 +1,7 @@
-import pprint
-
+import json
+from pprint import pprint
+import re
+import yaml
 
 def load_defined_conf(zone_file="sw1-zoneshow.txt"):
     with open(zone_file) as zone_in_text:
@@ -21,13 +23,6 @@ def load_effective_conf(zone_file="sw1-zoneshow.txt"):
     return
 
 def defined_zoneset(zone_file="sw1-zoneshow.txt"):
-    '''
-    This method returns the name of the defined zoneset and the members
-    :param zone_file: this is the input file with the 'zoneshow' output
-    :return:
-        defined_cfg_name: defined zoneset name
-        str_zoneset: a csv string of all the members in the zoneset
-    '''
     defined_cfg_name = "NONE"
     zoneset = set()
     with open(zone_file) as zone_in_text:
@@ -48,38 +43,25 @@ def defined_zoneset(zone_file="sw1-zoneshow.txt"):
     print("SOME ERROR")
     return
 
-def print_cisco_alias(zone_file="sw1-zoneshow.txt"):
-    if zone_file.startswith("sw1"):
-        with open("sw1_alias_extract.txt", 'w') as alias_file:
-            with open(zone_file) as zone_in_text:
-                for line in zone_in_text:
-                    if line.startswith(" alias"):
-                        #print(line, end='')
-                        #alias_file.write((''.join(str(s) for s in line)).replace('\t','').replace(' ','').split(':')[1])
-                        alias_file.write(line)
-                        #print(temp_alias_name,end = '')
-                        for line in zone_in_text:
-                            if not line.startswith("Effective"):
-                                alias_file.write(line)
-                                #print(line,end = '')
-                            else:
-                                return
-    else:
-        with open("sw2_alias_extract.txt", 'w') as alias_file:
-            with open(zone_file) as zone_in_text:
-                for line in zone_in_text:
-                    if line.startswith(" alias"):
-                        #print(line, end='')
-                        #alias_file.write((''.join(str(s) for s in line)).replace('\t','').replace(' ','').split(':')[1])
-                        alias_file.write(line)
-                        #print(temp_alias_name,end = '')
-                        for line in zone_in_text:
-                            if not line.startswith("Effective"):
-                                alias_file.write(line)
-                                #print(line,end = '')
-                            else:
-                                return
-    return
+def print_cisco_alias(vsan_id="100"):
+    #print("Alias JSON")
+    with open('brocade_alias.json', 'r') as jsonAliasFile:
+        # load jason file
+        aliasJasonFile = json.load(jsonAliasFile)
+    #pprint(aliasJasonFile)
+
+    #aliasJasonFile is of type dict
+    #print(type(aliasJasonFile))
+
+    #Print a list of the aliases
+    #print(list(aliasJasonFile))
+    for i in list(aliasJasonFile.items()):
+        name = i[1]['alias_name']
+        wwpn = i[1]['alias_wwpn']
+        print("conf t")
+        print("fcalias name "+name+" vsan "+vsan_id)
+        print("member pwwn "+wwpn)
+        print("end")
 
 def cisco_zoneset(defined_cfg_name, str_zoneset, vsanid = "100", switch_id_zoneset_file="sw_zoneset"):
     with open(switch_id_zoneset_file, 'w') as zonesetFile:
@@ -93,11 +75,25 @@ def cisco_zoneset(defined_cfg_name, str_zoneset, vsanid = "100", switch_id_zones
                zonesetFile.write("member "+i+"\n")
         #print("end")
         zonesetFile.write("end\n")
-    return
 
 def main():
-    #load_defined_conf("sw1-zoneshow.txt")
-    #load_effective_conf("sw1-zoneshow.txt")
+    #print("JSON")
+    with open('broc_act_conf.json', 'r') as jsonFile:
+        # load jason file
+        myJasonFile = json.load(jsonFile)
+    #pprint(myJasonFile)
+
+    #print("\nYAML")
+    yamlFile = open("broc_act_conf.yaml", 'r')
+    dictionary = yaml.load(yamlFile, Loader=yaml.FullLoader)
+    #for key, value in dictionary.items():
+    #    pprint (key + " : " + str(value))
+
+    #print_cisco_alias("101")
+
+    #load_defined_conf()
+
+    #load_effective_conf()
 
     #Extract the defined zoneset from the zoneshowfile for switch 1
     #the zoneshow file is from the 'zoneshow' command in a brocade switch
@@ -119,11 +115,6 @@ def main():
     switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
     cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
-    #Switches Aliases
-    sw_zoneshow_input_file = "sw1-zoneshow.txt"
-    print_cisco_alias(sw_zoneshow_input_file)
-    sw_zoneshow_input_file = "sw2-zoneshow.txt"
-    print_cisco_alias(sw_zoneshow_input_file)
 
 if __name__ == "__main__":
     # calling the main function

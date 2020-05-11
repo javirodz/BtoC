@@ -1,0 +1,82 @@
+ alias:	HeadA_0d
+		50:0a:09:81:89:fb:46:76
+ alias:	HeadB_0d
+		50:0a:09:81:99:fb:46:76
+ alias:	Nimble1CAfc1
+		56:c9:ce:90:4c:94:70:01
+ alias:	Nimble1CBfc1
+		56:c9:ce:90:4c:94:70:03
+ alias:	Nimble2CAfc2
+		56:c9:ce:90:4c:94:70:06
+ alias:	Nimble2CBfc2
+		56:c9:ce:90:4c:94:70:08
+ alias:	SA89_port1
+		21:00:00:24:ff:1a:ea:5c
+ alias:	Scaleri3_TopPort
+		50:03:08:c3:ec:15:c0:01; 50:03:08:c3:ec:15:c0:05;
+		50:03:08:c3:ec:15:c0:09
+ alias:	ma229_sw1
+		20:00:00:25:b5:11:00:5f
+ alias:	ma230_sw1
+		20:00:00:25:b5:11:00:7f
+ alias:	ma231_sw1
+		20:00:00:25:b5:11:00:6f
+ alias:	ma232_sw1
+		20:00:00:25:b5:11:00:9f
+ alias:	ma233_sw1
+		20:00:00:25:b5:11:00:8f
+ alias:	ma234_sw1
+		20:00:00:25:b5:1a:00:1f
+ alias:	ma235_sw1
+		20:00:00:25:b5:1a:00:4e
+ alias:	ma236_sw1
+		20:00:00:25:b5:1a:00:5e
+ alias:	ma237_sw1
+		20:00:00:25:b5:1a:00:2e
+ alias:	ma238_sw1
+		20:00:00:25:b5:1a:00:3e
+ alias:	nbu_slot2_0
+		10:00:00:00:c9:c8:81:a6
+ alias:	nbu_slot4_0
+		10:00:00:00:c9:c8:81:cb
+ alias:	sa110_sw1
+		21:00:00:24:ff:44:69:da
+ alias:	sa111_sw1
+		21:00:00:24:ff:44:04:f4
+ alias:	sa112_sw1
+		21:00:00:24:ff:44:03:20
+ alias:	sa150_sw1
+		21:00:00:1b:32:9a:a0:de
+ alias:	sa151_sw1
+		21:00:00:1b:32:9a:83:29
+ alias:	sa152_sw1
+		21:00:00:1b:32:9a:a1:de
+ alias:	sa153_sw1
+		21:00:00:1b:32:9a:99:28
+ alias:	sa154_sw1
+		21:00:00:24:ff:3a:28:6c
+ alias:	sa155_sw1
+		21:00:00:24:ff:3a:25:7c
+ alias:	sa160_sw1
+		20:00:00:1b:32:9a:65:29
+ alias:	sa161_sw1
+		21:00:00:1b:32:9c:11:91
+ alias:	sa162_sw1
+		21:00:00:1b:32:97:40:36
+ alias:	sa163_sw1
+		21:00:00:1b:32:92:41:82
+ alias:	sa170_sw1
+		21:00:00:1b:32:9c:c2:90
+ alias:	sa172_sw1
+		20:00:00:1b:32:9f:f8:ea
+ alias:	sa180_sw1
+		21:00:00:1b:32:9a:46:de
+ alias:	sa182_sw1
+		20:00:00:1b:32:9f:9e:e8
+ alias:	ts3200_drive1
+		20:04:00:0e:11:14:bc:1a; 20:05:00:0e:11:14:bc:1a
+ alias:	v7k1_1	50:05:07:68:02:10:58:46
+ alias:	v7k1_2	50:05:07:68:02:20:58:46
+ alias:	v7k2_1	50:05:07:68:02:10:58:47
+ alias:	v7k2_2	50:05:07:68:02:20:58:47
+
