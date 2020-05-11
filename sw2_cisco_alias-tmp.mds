@@ -1,180 +1,180 @@
 configure terminal
-fcalias name HeadA_0b vsan 200
+fcalias name HeadA_0b vsan 2000
 member pwwn 50:0a:09:82:89:fb:46:76
 
 end
 configure terminal
-fcalias name HeadB_0b vsan 200
+fcalias name HeadB_0b vsan 2000
 member pwwn 50:0a:09:82:99:fb:46:76
 
 end
 configure terminal
-fcalias name Nimble1CAfc2 vsan 200
+fcalias name Nimble1CAfc2 vsan 2000
 member pwwn 56:c9:ce:90:4c:94:70:02
 
 end
 configure terminal
-fcalias name Nimble1CBfc2 vsan 200
+fcalias name Nimble1CBfc2 vsan 2000
 member pwwn 56:c9:ce:90:4c:94:70:04
 
 end
 configure terminal
-fcalias name Nimble2CAfc1 vsan 200
+fcalias name Nimble2CAfc1 vsan 2000
 member pwwn 56:c9:ce:90:4c:94:70:05
 
 end
 configure terminal
-fcalias name Nimble2CBfc1 vsan 200
+fcalias name Nimble2CBfc1 vsan 2000
 member pwwn 56:c9:ce:90:4c:94:70:07
 
 end
 configure terminal
-fcalias name ma230_sw2 vsan 200
+fcalias name ma230_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:11:00:7f
 
 end
 configure terminal
-fcalias name ma231_sw2 vsan 200
+fcalias name ma231_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:11:00:6f
 
 end
 configure terminal
-fcalias name ma232_sw2 vsan 200
+fcalias name ma232_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:11:00:9f
 
 end
 configure terminal
-fcalias name ma233_sw2 vsan 200
+fcalias name ma233_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:11:00:8f
 
 end
 configure terminal
-fcalias name ma234_sw2 vsan 200
+fcalias name ma234_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:1b:00:1f
 
 end
 configure terminal
-fcalias name ma235_sw2 vsan 200
+fcalias name ma235_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:1b:00:4e
 
 end
 configure terminal
-fcalias name ma236_sw2 vsan 200
+fcalias name ma236_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:1b:00:5e
 
 end
 configure terminal
-fcalias name ma237_sw2 vsan 200
+fcalias name ma237_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:1b:00:2e
 
 end
 configure terminal
-fcalias name ma238_sw2 vsan 200
+fcalias name ma238_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:1b:00:3e
 
 end
 configure terminal
-fcalias name ms229_sw2 vsan 200
+fcalias name ms229_sw2 vsan 2000
 member pwwn 20:00:00:25:b5:11:00:5f
 
 end
 configure terminal
-fcalias name nbu_slot2_1 vsan 200
+fcalias name nbu_slot2_1 vsan 2000
 member pwwn 10:00:00:00:c9:c8:81:a7
 
 end
 configure terminal
-fcalias name nbu_slot4_1 vsan 200
+fcalias name nbu_slot4_1 vsan 2000
 member pwwn 10:00:00:00:c9:c8:81:ca
 
 end
 configure terminal
-fcalias name sa110_sw2 vsan 200
+fcalias name sa110_sw2 vsan 2000
 member pwwn 21:00:00:24:ff:44:69:db
 
 end
 configure terminal
-fcalias name sa111_sw2 vsan 200
+fcalias name sa111_sw2 vsan 2000
 member pwwn 21:00:00:24:ff:44:04:f5
 
 end
 configure terminal
-fcalias name sa112_sw2 vsan 200
+fcalias name sa112_sw2 vsan 2000
 member pwwn 21:00:00:24:ff:44:03:21
 
 end
 configure terminal
-fcalias name sa150_sw2 vsan 200
+fcalias name sa150_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:a0:de
 
 end
 configure terminal
-fcalias name sa151_sw2 vsan 200
+fcalias name sa151_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:83:29
 
 end
 configure terminal
-fcalias name sa152_sw2 vsan 200
+fcalias name sa152_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:a1:de
 
 end
 configure terminal
-fcalias name sa153_sw2 vsan 200
+fcalias name sa153_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:99:28
 
 end
 configure terminal
-fcalias name sa154_sw2 vsan 200
+fcalias name sa154_sw2 vsan 2000
 member pwwn 21:00:00:24:ff:3a:28:6d
 
 end
 configure terminal
-fcalias name sa155_sw2 vsan 200
+fcalias name sa155_sw2 vsan 2000
 member pwwn 21:00:00:24:ff:3a:25:7d
 
 end
 configure terminal
-fcalias name sa160_sw2 vsan 200
+fcalias name sa160_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:65:29
 
 end
 configure terminal
-fcalias name sa161_sw2 vsan 200
+fcalias name sa161_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:bc:11:91
 
 end
 configure terminal
-fcalias name sa162_sw2 vsan 200
+fcalias name sa162_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:b7:40:36
 
 end
 configure terminal
-fcalias name sa163_sw2 vsan 200
+fcalias name sa163_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:b2:41:82
 
 end
 configure terminal
-fcalias name sa170_sw2 vsan 200
+fcalias name sa170_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:bc:c2:90
 
 end
 configure terminal
-fcalias name sa172_sw2 vsan 200
+fcalias name sa172_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:bf:f8:ea
 
 end
 configure terminal
-fcalias name sa180_sw2 vsan 200
+fcalias name sa180_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:ba:46:de
 
 end
 configure terminal
-fcalias name sa182_sw2 vsan 200
+fcalias name sa182_sw2 vsan 2000
 member pwwn 21:01:00:1b:32:bf:9e:e8
 
 end
 configure terminal
-fcalias name ts3200_drive2 vsan 200
+fcalias name ts3200_drive2 vsan 2000
 member pwwn 20:01:00:0e:11:14:bc:1a
 member pwwn 20:02:00:0e:11:14:bc:1a
 member pwwn 20:07:00:0e:11:14:bc:1a
@@ -182,22 +182,22 @@ member pwwn 20:0a:00:0e:11:14:bc:1a
 
 end
 configure terminal
-fcalias name v7k1_3 vsan 200
+fcalias name v7k1_3 vsan 2000
 member pwwn 50:05:07:68:02:30:58:46
 
 end
 configure terminal
-fcalias name v7k1_4 vsan 200
+fcalias name v7k1_4 vsan 2000
 member pwwn 50:05:07:68:02:40:58:46
 
 end
 configure terminal
-fcalias name v7k2_3 vsan 200
+fcalias name v7k2_3 vsan 2000
 member pwwn 50:05:07:68:02:30:58:47
 
 end
 configure terminal
-fcalias name v7k2_4 vsan 200
+fcalias name v7k2_4 vsan 2000
 member pwwn 50:05:07:68:02:40:58:47
 
 end

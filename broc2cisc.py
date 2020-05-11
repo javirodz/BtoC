@@ -105,7 +105,7 @@ def main():
     #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
 
     #print the commands to create a zoneset in a cisco mds to a .mds file
-    vsanid = "100"
+    vsanid = "1000"
     switch_id_zoneset_file = "sw1_zoneset.mds" #Destination File for the Script
     #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
@@ -115,7 +115,7 @@ def main():
     #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
 
     #print the commands to create a zoneset in a cisco mds to a .mds file
-    vsanid = "200"
+    vsanid = "2000"
     switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
     #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
@@ -127,11 +127,11 @@ def main():
     #print_cisco_alias(sw2_zoneshow_input_file)
 
     sw1_alias_extract_file = "sw1_alias_extract.txt"
-    sw1_vsanid = "100"
+    sw1_vsanid = "1000"
     brocade_to_cisco_alias(sw1_alias_extract_file, sw1_vsanid)
 
     sw2_alias_extract_file = "sw2_alias_extract.txt"
-    sw2_vsanid = "200"
+    sw2_vsanid = "2000"
     brocade_to_cisco_alias(sw2_alias_extract_file, sw2_vsanid)
 
 def brocade_to_cisco_alias(sw_alias_extract_file,vsanid):

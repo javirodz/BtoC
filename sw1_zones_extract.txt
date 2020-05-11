@@ -1,0 +1,86 @@
+ zone:	MA229Sw1_V7000
+		ma229_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1;v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	MA230Sw1_V7000
+		ma230_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1;v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	MA231Sw1_V7000
+		ma231_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1;v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	MA232Sw1_V7000
+		ma232_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1;v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	MA233Sw1_V7000
+		ma233_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1;v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	SA170SW1_V7000
+        sa160_sw1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	SA171SW1_v7000
+		sa170_sw1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	SA89_Scaleri3
+		SA89_port1; Scaleri3_TopPort
+ zone:	ma230Sw1_NSeries
+		HeadA_0d; HeadB_0d; ma230_sw1
+ zone:	ma231Sw1_NSeries
+		HeadA_0d; HeadB_0d; ma231_sw1
+ zone:	ma232Sw1_NSeries
+		HeadA_0d; HeadB_0d; ma232_sw1
+ zone:	ma233Sw1_NSeries
+		HeadA_0d; HeadB_0d; ma233_sw1
+ zone:	ma234SW1_NSeries
+		HeadA_0d; HeadB_0d; ma234_sw1
+ zone:	ma234SW1_V7000
+		ma234_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1; v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	ma235SW1_NSeries
+		HeadA_0d; HeadB_0d; ma235_sw1
+ zone:	ma235SW1_V7000
+		ma235_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1; v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	ma236SW1_NSeries
+		HeadA_0d; HeadB_0d; ma236_sw1
+ zone:	ma236SW1_V7000
+		ma236_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1; v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	ma237SW1_NSeries
+		HeadA_0d; HeadB_0d; ma237_sw1
+ zone:	ma237SW1_V7000
+		ma237_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1; v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	ma238SW1_NSeries
+		HeadA_0d; HeadB_0d; ma238_sw1
+ zone:	ma238SW1_V7000
+		ma238_sw1; Nimble1CAfc1; Nimble1CBfc1; v7k1_1; v7k1_2; v7k2_1; v7k2_2; Nimble2CAfc2; Nimble2CBfc2
+ zone:	nbu_netapp
+		HeadA_0d; HeadB_0d; nbu_slot2_0
+ zone:	nbu_ts3200
+		nbu_slot4_0; ts3200_drive1
+ zone:	nbu_v7k	nbu_slot2_0; Nimble1CAfc1; Nimble1CBfc1; Nimble2CAfc2;
+		Nimble2CBfc2; SA89_port1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	sa110_v7k
+		sa110_sw1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	sa111_v7k
+		sa111_sw1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	sa112_v7k
+		sa112_sw1; v7k1_1; v7k1_2; v7k2_1; v7k2_2
+ zone:	sa150Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa150_sw1
+ zone:	sa151Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa151_sw1
+ zone:	sa152Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa152_sw1
+ zone:	sa153Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa153_sw1
+ zone:	sa154Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa154_sw1
+ zone:	sa155Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa155_sw1
+ zone:	sa160Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa160_sw1
+ zone:	sa161sw1_NSeries
+		HeadA_0d; HeadB_0d; sa161_sw1
+ zone:	sa162Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa162_sw1
+ zone:	sa163Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa163_sw1
+ zone:	sa170Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa170_sw1
+ zone:	sa172Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa172_sw1
+ zone:	sa180Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa180_sw1
+ zone:	sa182Sw1_NSeries
+		HeadA_0d; HeadB_0d; sa182_sw1
+ zone:	v7k_internal
+		v7k1_1; v7k1_2; v7k2_1; v7k2_2
