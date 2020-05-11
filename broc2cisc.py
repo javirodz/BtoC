@@ -102,28 +102,84 @@ def main():
     #Extract the defined zoneset from the zoneshowfile for switch 1
     #the zoneshow file is from the 'zoneshow' command in a brocade switch
     sw_zoneshow_input_file = "sw1-zoneshow.txt"
-    defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
+    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
 
     #print the commands to create a zoneset in a cisco mds to a .mds file
     vsanid = "100"
     switch_id_zoneset_file = "sw1_zoneset.mds" #Destination File for the Script
-    cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
+    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
     #Extract the defined zoneset from the zoneshowfile for switch 2
     #the zoneshow file is from the 'zoneshow' command in a brocade switch
     sw_zoneshow_input_file = "sw2-zoneshow.txt"
-    defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
+    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
 
     #print the commands to create a zoneset in a cisco mds to a .mds file
     vsanid = "200"
     switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
-    cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
+    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
 
     #Switches Aliases
-    sw_zoneshow_input_file = "sw1-zoneshow.txt"
-    print_cisco_alias(sw_zoneshow_input_file)
-    sw_zoneshow_input_file = "sw2-zoneshow.txt"
-    print_cisco_alias(sw_zoneshow_input_file)
+    sw1_zoneshow_input_file = "sw1-zoneshow.txt"
+    #print_cisco_alias(sw_zoneshow_input_file)
+    sw2_zoneshow_input_file = "sw2-zoneshow.txt"
+    #print_cisco_alias(sw1_zoneshow_input_file)
+    #print_cisco_alias(sw2_zoneshow_input_file)
+
+    sw1_alias_extract_file = "sw1_alias_extract.txt"
+    sw1_vsanid = "100"
+    brocade_to_cisco_alias(sw1_alias_extract_file, sw1_vsanid)
+
+    sw2_alias_extract_file = "sw2_alias_extract.txt"
+    sw2_vsanid = "200"
+    brocade_to_cisco_alias(sw2_alias_extract_file, sw2_vsanid)
+
+def brocade_to_cisco_alias(sw_alias_extract_file,vsanid):
+    if sw_alias_extract_file.startswith("sw1"):
+        with open("sw1_cisco_alias-tmp.mds", "w") as cisco_alias_script_file:
+            with open(sw_alias_extract_file) as brocade_alias_text:
+                while True:
+                    try:
+                        line1 = brocade_alias_text.readline().replace('\t', '').replace(' ', '').split(':')[1]
+                        #print("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid)
+                        cisco_alias_script_file.write("configure terminal\n")
+                        cisco_alias_script_file.write("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid+"\n")
+                    except:
+                        print("EOF")
+                        break
+                    line2 = brocade_alias_text.readline().replace('\t', '').replace(' ', '')
+
+                    for wwpn in line2.split(';'):
+                       #print("member pwwn "+wwpn)
+                        cisco_alias_script_file.write("member pwwn "+wwpn+"\n")
+                    cisco_alias_script_file.write("end\n")
+        with open("sw1_cisco_alias-tmp.mds") as infile, open("sw1_cisco_alias.mds", 'w') as outfile:
+            for line in infile:
+                if not line.strip(): continue  # skip the empty line
+                outfile.write(line)  # non-empty line. Write it to output
+
+    else:
+        with open("sw2_cisco_alias-tmp.mds", "w") as cisco_alias_script_file:
+            with open(sw_alias_extract_file) as brocade_alias_text:
+                while True:
+                    try:
+                        line1 = brocade_alias_text.readline().replace('\t', '').replace(' ', '').split(':')[1]
+                        #print("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid)
+                        cisco_alias_script_file.write("configure terminal\n")
+                        cisco_alias_script_file.write("fcalias name "+line1.replace('\n', '')+" vsan "+vsanid+"\n")
+                    except:
+                        print("EOF")
+                        break
+                    line2 = brocade_alias_text.readline().replace('\t', '').replace(' ', '')
+
+                    for wwpn in line2.split(';'):
+                       #print("member pwwn "+wwpn)
+                        cisco_alias_script_file.write("member pwwn "+wwpn+"\n")
+                    cisco_alias_script_file.write("end\n")
+        with open("sw2_cisco_alias-tmp.mds") as infile, open("sw2_cisco_alias.mds", 'w') as outfile:
+            for line in infile:
+                if not line.strip(): continue  # skip the empty line
+                outfile.write(line)  # non-empty line. Write it to output
 
 if __name__ == "__main__":
     # calling the main function

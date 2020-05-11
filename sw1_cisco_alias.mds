@@ -1,0 +1,171 @@
+configure terminal
+fcalias name HeadA_0d vsan 100
+member pwwn 50:0a:09:81:89:fb:46:76
+end
+configure terminal
+fcalias name HeadB_0d vsan 100
+member pwwn 50:0a:09:81:99:fb:46:76
+end
+configure terminal
+fcalias name Nimble1CAfc1 vsan 100
+member pwwn 56:c9:ce:90:4c:94:70:01
+end
+configure terminal
+fcalias name Nimble1CBfc1 vsan 100
+member pwwn 56:c9:ce:90:4c:94:70:03
+end
+configure terminal
+fcalias name Nimble2CAfc2 vsan 100
+member pwwn 56:c9:ce:90:4c:94:70:06
+end
+configure terminal
+fcalias name Nimble2CBfc2 vsan 100
+member pwwn 56:c9:ce:90:4c:94:70:08
+end
+configure terminal
+fcalias name SA89_port1 vsan 100
+member pwwn 21:00:00:24:ff:1a:ea:5c
+end
+configure terminal
+fcalias name Scaleri3_TopPort vsan 100
+member pwwn 50:03:08:c3:ec:15:c0:01
+member pwwn 50:03:08:c3:ec:15:c0:05
+member pwwn 50:03:08:c3:ec:15:c0:09
+end
+configure terminal
+fcalias name ma229_sw1 vsan 100
+member pwwn 20:00:00:25:b5:11:00:5f
+end
+configure terminal
+fcalias name ma230_sw1 vsan 100
+member pwwn 20:00:00:25:b5:11:00:7f
+end
+configure terminal
+fcalias name ma231_sw1 vsan 100
+member pwwn 20:00:00:25:b5:11:00:6f
+end
+configure terminal
+fcalias name ma232_sw1 vsan 100
+member pwwn 20:00:00:25:b5:11:00:9f
+end
+configure terminal
+fcalias name ma233_sw1 vsan 100
+member pwwn 20:00:00:25:b5:11:00:8f
+end
+configure terminal
+fcalias name ma234_sw1 vsan 100
+member pwwn 20:00:00:25:b5:1a:00:1f
+end
+configure terminal
+fcalias name ma235_sw1 vsan 100
+member pwwn 20:00:00:25:b5:1a:00:4e
+end
+configure terminal
+fcalias name ma236_sw1 vsan 100
+member pwwn 20:00:00:25:b5:1a:00:5e
+end
+configure terminal
+fcalias name ma237_sw1 vsan 100
+member pwwn 20:00:00:25:b5:1a:00:2e
+end
+configure terminal
+fcalias name ma238_sw1 vsan 100
+member pwwn 20:00:00:25:b5:1a:00:3e
+end
+configure terminal
+fcalias name nbu_slot2_0 vsan 100
+member pwwn 10:00:00:00:c9:c8:81:a6
+end
+configure terminal
+fcalias name nbu_slot4_0 vsan 100
+member pwwn 10:00:00:00:c9:c8:81:cb
+end
+configure terminal
+fcalias name sa110_sw1 vsan 100
+member pwwn 21:00:00:24:ff:44:69:da
+end
+configure terminal
+fcalias name sa111_sw1 vsan 100
+member pwwn 21:00:00:24:ff:44:04:f4
+end
+configure terminal
+fcalias name sa112_sw1 vsan 100
+member pwwn 21:00:00:24:ff:44:03:20
+end
+configure terminal
+fcalias name sa150_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9a:a0:de
+end
+configure terminal
+fcalias name sa151_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9a:83:29
+end
+configure terminal
+fcalias name sa152_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9a:a1:de
+end
+configure terminal
+fcalias name sa153_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9a:99:28
+end
+configure terminal
+fcalias name sa154_sw1 vsan 100
+member pwwn 21:00:00:24:ff:3a:28:6c
+end
+configure terminal
+fcalias name sa155_sw1 vsan 100
+member pwwn 21:00:00:24:ff:3a:25:7c
+end
+configure terminal
+fcalias name sa160_sw1 vsan 100
+member pwwn 20:00:00:1b:32:9a:65:29
+end
+configure terminal
+fcalias name sa161_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9c:11:91
+end
+configure terminal
+fcalias name sa162_sw1 vsan 100
+member pwwn 21:00:00:1b:32:97:40:36
+end
+configure terminal
+fcalias name sa163_sw1 vsan 100
+member pwwn 21:00:00:1b:32:92:41:82
+end
+configure terminal
+fcalias name sa170_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9c:c2:90
+end
+configure terminal
+fcalias name sa172_sw1 vsan 100
+member pwwn 20:00:00:1b:32:9f:f8:ea
+end
+configure terminal
+fcalias name sa180_sw1 vsan 100
+member pwwn 21:00:00:1b:32:9a:46:de
+end
+configure terminal
+fcalias name sa182_sw1 vsan 100
+member pwwn 20:00:00:1b:32:9f:9e:e8
+end
+configure terminal
+fcalias name ts3200_drive1 vsan 100
+member pwwn 20:04:00:0e:11:14:bc:1a
+member pwwn 20:05:00:0e:11:14:bc:1a
+end
+configure terminal
+fcalias name v7k1_1 vsan 100
+member pwwn 50:05:07:68:02:10:58:46
+end
+configure terminal
+fcalias name v7k1_2 vsan 100
+member pwwn 50:05:07:68:02:20:58:46
+end
+configure terminal
+fcalias name v7k2_1 vsan 100
+member pwwn 50:05:07:68:02:10:58:47
+end
+configure terminal
+fcalias name v7k2_2 vsan 100
+member pwwn 50:05:07:68:02:20:58:47
+end
