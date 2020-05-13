@@ -1,7 +1,11 @@
 import pprint
 
 
-def load_defined_conf(zone_file="sw1-zoneshow.txt"):
+def load_defined_conf(zone_file):
+    '''
+    :param zone_file: sw[1|2]-zoneshow.txt
+    :return: prints the defined zoneset
+    '''
     with open(zone_file) as zone_in_text:
         for line in zone_in_text:
             if line.startswith("Effective"):
@@ -10,7 +14,11 @@ def load_defined_conf(zone_file="sw1-zoneshow.txt"):
                 print(line,end = '')
     return
 
-def load_effective_conf(zone_file="sw1-zoneshow.txt"):
+def load_effective_conf(zone_file):
+    '''
+    :param zone_file: sw[1|2]-zoneshow.txt
+    :return: prints the effective zoneset
+    '''
     with open(zone_file) as zone_in_text:
         for line in zone_in_text:
             if line.startswith("Effective"):
@@ -49,6 +57,11 @@ def defined_zoneset(zone_file="sw1-zoneshow.txt"):
     return
 
 def print_cisco_alias(zone_file="sw1-zoneshow.txt"):
+    '''
+    :param zone_file: sw[1|2]-zoneshow.txt (showing a default value here)
+    :return: writes sw[1|2]alias_extract.txt <= fix this file to have the alias name in one line and all the wwpns
+                                                in the second line
+    '''
     if zone_file.startswith("sw1"):
         with open("sw1_alias_extract.txt", 'w') as alias_file:
             with open(zone_file) as zone_in_text:
@@ -82,6 +95,13 @@ def print_cisco_alias(zone_file="sw1-zoneshow.txt"):
     return
 
 def cisco_zoneset(defined_cfg_name, str_zoneset, vsanid = "100", switch_id_zoneset_file="sw_zoneset"):
+    '''
+    :param defined_cfg_name: zoneset name
+    :param str_zoneset: csv of all zones in the deine zoneset
+    :param vsanid: VSAN id
+    :param switch_id_zoneset_file:  sw[1|2]_zoneset.mds output file name (showing a default value here)
+    :return:
+    '''
     with open(switch_id_zoneset_file, 'w') as zonesetFile:
         #print("configure terminal")
         zonesetFile.write("configure terminal\n")
@@ -95,55 +115,12 @@ def cisco_zoneset(defined_cfg_name, str_zoneset, vsanid = "100", switch_id_zones
         zonesetFile.write("end\n")
     return
 
-def main():
-    #load_defined_conf("sw1-zoneshow.txt")
-    #load_effective_conf("sw1-zoneshow.txt")
-
-    #Extract the defined zoneset from the zoneshowfile for switch 1
-    #the zoneshow file is from the 'zoneshow' command in a brocade switch
-    sw_zoneshow_input_file = "sw1-zoneshow.txt"
-    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
-
-    #print the commands to create a zoneset in a cisco mds to a .mds file
-    vsanid = "1000"
-    switch_id_zoneset_file = "sw1_zoneset.mds" #Destination File for the Script
-    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
-
-    #Extract the defined zoneset from the zoneshowfile for switch 2
-    #the zoneshow file is from the 'zoneshow' command in a brocade switch
-    sw_zoneshow_input_file = "sw2-zoneshow.txt"
-    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
-
-    #print the commands to create a zoneset in a cisco mds to a .mds file
-    vsanid = "2000"
-    switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
-    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
-
-    #Switches Aliases
-    sw1_zoneshow_input_file = "sw1-zoneshow.txt"
-    #print_cisco_alias(sw_zoneshow_input_file)
-    sw2_zoneshow_input_file = "sw2-zoneshow.txt"
-    #print_cisco_alias(sw1_zoneshow_input_file)
-    #print_cisco_alias(sw2_zoneshow_input_file)
-
-    sw1_alias_extract_file = "sw1_alias_extract.txt"
-    sw1_vsanid = "1000"
-    brocade_to_cisco_alias(sw1_alias_extract_file, sw1_vsanid)
-
-    sw2_alias_extract_file = "sw2_alias_extract.txt"
-    sw2_vsanid = "2000"
-    brocade_to_cisco_alias(sw2_alias_extract_file, sw2_vsanid)
-
-    #Zones
-    sw1_zones_extract_file = "sw1_zones_extract.txt"
-    sw1_vsanid = "1000"
-    brocade_to_cisco_zones(sw1_zones_extract_file, sw1_vsanid)
-
-    sw2_zones_extract_file = "sw2_zones_extract.txt"
-    sw2_vsanid = "2000"
-    brocade_to_cisco_zones(sw2_zones_extract_file, sw2_vsanid)
-
 def brocade_to_cisco_zones(sw_zones_extract_file,vsanid):
+    '''
+    :param sw_zones_extract_file: sw[1|2]zones_extract.txt (fixed, see README)
+    :param vsanid: VSAN id
+    :return: sw1_cisco_zones.mds file with the cisco commands to create the zones
+    '''
     if sw_zones_extract_file.startswith("sw1"):
         with open("sw1_cisco_zones-tmp.mds", "w") as cisco_zones_script_file:
             with open(sw_zones_extract_file) as brocade_alias_text:
@@ -195,6 +172,11 @@ def brocade_to_cisco_zones(sw_zones_extract_file,vsanid):
                 outfile.write(line)  # non-empty line. Write it to output
 
 def brocade_to_cisco_alias(sw_alias_extract_file,vsanid):
+    '''
+    :param sw_alias_extract_file: sw[1|2]alias_extract.txt (fixed, see README)
+    :param vsanid: VSAN id
+    :return: sw1_cisco_alias.mds file with the cisco commands to create the zones
+    '''
     if sw_alias_extract_file.startswith("sw1"):
         with open("sw1_cisco_alias-tmp.mds", "w") as cisco_alias_script_file:
             with open(sw_alias_extract_file) as brocade_alias_text:
@@ -240,6 +222,54 @@ def brocade_to_cisco_alias(sw_alias_extract_file,vsanid):
             for line in infile:
                 if not line.strip(): continue  # skip the empty line
                 outfile.write(line)  # non-empty line. Write it to output
+
+def main():
+    #load_defined_conf("sw1-zoneshow.txt")
+    #load_effective_conf("sw1-zoneshow.txt")
+
+    #Extract the defined zoneset from the zoneshowfile for switch 1
+    #the zoneshow file is from the 'zoneshow' command in a brocade switch
+    sw_zoneshow_input_file = "sw1-zoneshow.txt"
+    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
+
+    #print the commands to create a zoneset in a cisco mds to a .mds file
+    vsanid = "1000"
+    switch_id_zoneset_file = "sw1_zoneset.mds" #Destination File for the Script
+    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
+
+    #Extract the defined zoneset from the zoneshowfile for switch 2
+    #the zoneshow file is from the 'zoneshow' command in a brocade switch
+    sw_zoneshow_input_file = "sw2-zoneshow.txt"
+    #defined_zoneset_name, str_zoneset = defined_zoneset(sw_zoneshow_input_file)
+
+    #print the commands to create a zoneset in a cisco mds to a .mds file
+    vsanid = "2000"
+    switch_id_zoneset_file = "sw2_zoneset.mds" #Destination File for the Script
+    #cisco_zoneset(defined_zoneset_name, str_zoneset, vsanid, switch_id_zoneset_file)
+
+    #Switches Aliases
+    sw1_zoneshow_input_file = "sw1-zoneshow.txt"
+    #print_cisco_alias(sw_zoneshow_input_file)
+    sw2_zoneshow_input_file = "sw2-zoneshow.txt"
+    #print_cisco_alias(sw1_zoneshow_input_file)
+    #print_cisco_alias(sw2_zoneshow_input_file)
+
+    sw1_alias_extract_file = "sw1_alias_extract.txt"
+    sw1_vsanid = "1000"
+    brocade_to_cisco_alias(sw1_alias_extract_file, sw1_vsanid)
+
+    sw2_alias_extract_file = "sw2_alias_extract.txt"
+    sw2_vsanid = "2000"
+    brocade_to_cisco_alias(sw2_alias_extract_file, sw2_vsanid)
+
+    #Zones
+    sw1_zones_extract_file = "sw1_zones_extract.txt"
+    sw1_vsanid = "1000"
+    brocade_to_cisco_zones(sw1_zones_extract_file, sw1_vsanid)
+
+    sw2_zones_extract_file = "sw2_zones_extract.txt"
+    sw2_vsanid = "2000"
+    brocade_to_cisco_zones(sw2_zones_extract_file, sw2_vsanid)
 
 if __name__ == "__main__":
     # calling the main function
